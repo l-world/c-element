@@ -22,28 +22,6 @@ export default {
     },
     type:String,
     justify:{
-<<<<<<< HEAD
-      type:String,
-      default:'start',
-      validator: val => {
-        return ['start','end','center','space-around','space-between'].includes(val)
-      }
-    },
-    align:{
-      type:String,
-      default:'top',
-      validator: val => {
-        return ['top','middle','bottom'].includes(val)
-      }
-    }
-  },
-  computed:{
-    style(){
-      let style = {}
-      if(this.gutter){
-        style.marginLeft = -this.gutter / 2 + 'px'
-        style.marginRight = style.marginLeft
-=======
       Number:String,
       default:'start',
       validator:val =>{
@@ -56,7 +34,6 @@ export default {
       default:'top',
       validator: val => {
         return ['top','middle','bottom'].includes(val)
->>>>>>> 4a1baf224f89698e000a727fbd04225b21bcdcd9
       }
     }
   },
@@ -74,26 +51,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-<<<<<<< HEAD
-
-=======
->>>>>>> 4a1baf224f89698e000a727fbd04225b21bcdcd9
 .el-row{
   &::after,
   &::before{
     display: block;
-<<<<<<< HEAD
-    content:''
-  }
-  &::after{
-    clear: both;
-  }
-  & .el-row--flex{
-    display: flex;
-  }
-}
-
-=======
     content: "";
   }
   &::after{
@@ -125,5 +86,4 @@ export default {
     }
   }
 }
->>>>>>> 4a1baf224f89698e000a727fbd04225b21bcdcd9
 </style>
