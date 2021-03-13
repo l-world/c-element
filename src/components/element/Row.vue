@@ -1,5 +1,7 @@
 <template>
-  <div class="el-row" :style="style">
+  <div :class="
+          'el-row'" 
+        :style="style">
     <slot></slot>
   </div>
 </template>
@@ -12,6 +14,21 @@ export default {
       type: Number,
       default: 0,
     },
+    type:String,
+    justify:{
+      type:String,
+      default:'start',
+      validator: val => {
+        return ['start','end','center','space-around','space-between'].includes(val)
+      }
+    },
+    align:{
+      type:String,
+      default:'top',
+      validator: val => {
+        return ['top','middle','bottom'].includes(val)
+      }
+    }
   },
   computed:{
     style(){
@@ -26,6 +43,20 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+
+.el-row{
+  &::after,
+  &::before{
+    display: block;
+    content:''
+  }
+  &::after{
+    clear: both;
+  }
+  & .el-row--flex{
+    display: flex;
+  }
+}
 
 </style>

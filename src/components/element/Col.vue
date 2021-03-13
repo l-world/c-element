@@ -4,6 +4,9 @@
     :style="style"
   >
     <slot></slot>
+  <!-- 
+    :class="['el-col',`el-col-${span}`,`el-col-offset-${offset}`,`el-col-push-${push}`,`el-col-pull-${pull}`]"
+  -->
   </div>
 </template>
 
@@ -48,7 +51,7 @@ export default {
       let classList = [];
       ['span','offset','pull','push'].forEach((prop) => {
         if(this[prop]){
-          classList.push( prop === 'span' ? `el-col-${prop}` : `el-col-${prop}-${this[prop]}` )
+          classList.push( prop === 'span' ? `el-col-${this[prop]}` : `el-col-${prop}-${this[prop]}` )
         }
       })
       return classList;
@@ -72,7 +75,7 @@ export default {
   .el-col-push-#{$i}{
     position: relative;
     left: $i / 24 * 100%;
-  }j
+  }
   .el-col-pull-#{$i}{
     position: relative;
     right: $i / 24 * 100%;
