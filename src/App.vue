@@ -65,14 +65,14 @@
 </template>
 
 <script>
-import ElRow from '@element/Row.vue';
-import ElCol from '@element/Col.vue';
+// import ElRow from '@element/row';
+// import ElCol from '@element/col';
 
 export default {
   name: 'app',
   components: {
-    ElRow,
-    ElCol,
+    // ElRow,
+    // ElCol,
   },
 };
 </script>
