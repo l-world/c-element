@@ -1,0 +1,30 @@
+@import './mixins/config.scss';
+@mixin b($block){
+    $B:$namespace + $element-separator + $block;
+  
+    @at-root {
+      .#{$B}{
+        @content;
+      }
+    }
+}
+@mixin m($modifier) {
+    $seletor:&;
+    $currentSelector:$seletor + $modifier--separator + $modifier;
+    @at-root{
+      #{$currentSelector}{
+        @content;
+      }
+    }
+  }
+  
+@mixin  when($state) {
+$selector:&;
+$currentState:$selector + '.' + $state-prefix + $state;
+
+@at-root{
+    #{$currentState}{
+    @content;
+    }
+}
+}

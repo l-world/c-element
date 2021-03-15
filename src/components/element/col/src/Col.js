@@ -17,20 +17,20 @@ export default {
       type: Number,
       default: 0,
     },
-    xs:[Number,Object],
-    sm:[Number,Object],
-    md:[Number,Object],
-    lg:[Number,Object],
-    xl:[Number,Object],
-    tag:{
-      type:String,
-      default:'div'
-    }
+    xs: [Number, Object],
+    sm: [Number, Object],
+    md: [Number, Object],
+    lg: [Number, Object],
+    xl: [Number, Object],
+    tag: {
+      type: String,
+      default: 'div',
+    },
   },
   computed: {
     gutter() {
       let parent = this.$parent;
-      while (parent && parent.$options.name !== 'el-row') {
+      while (parent && parent.$options.name !== 'ElRow') {
         parent = parent.$parent;
       }
       return parent ? parent.gutter : 0;
@@ -50,24 +50,23 @@ export default {
           classList.push(prop === 'span' ? `el-col-${this[prop]}` : `el-col-${prop}-${this[prop]}`);
         }
       });
-      ['xs','sm','md','lg','xl'].forEach( size => {
-        if(typeof this[size] === 'number'){
-          classList.push(`el-col-${size}-${this[size]}`)
+      ['xs', 'sm', 'md', 'lg', 'xl'].forEach((size) => {
+        if (typeof this[size] === 'number') {
+          classList.push(`el-col-${size}-${this[size]}`);
+        } else if (typeof this[size] === 'object') {
+          const props = this[size];
+          Object.keys(props).forEach((prop) => {
+            classList.push(prop === 'span' ? `el-col-${size}-${props[prop]}` : `el-col-${size}-${prop}-${props[prop]}`);
+          });
         }
-        else if(typeof this[size] === 'object'){
-          const props = this[size]
-          Object.keys(props).forEach( prop => {
-            classList.push(prop === 'span' ? `el-col-${size}-${props[prop]}` : `el-col-${size}-${prop}-${props[prop]}`)
-          })
-        }
-      })
+      });
       return classList;
     },
   },
-  render(h){
-    return h(this.tag,{
-      class:['el-col',this.classList],
-      style:this.style
-    },this.$slots.default)
-  }
-}
+  render(h) {
+    return h(this.tag, {
+      class: ['el-col', this.classList],
+      style: this.style,
+    }, this.$slots.default);
+  },
+};
