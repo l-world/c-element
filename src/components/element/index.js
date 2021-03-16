@@ -1,7 +1,12 @@
 import Row from './row';
 import Col from './col';
+import Container from './container';
+import Main from './main';
+import Header from './header';
+import Footer from './footer';
+import Aside from './aside';
 
-const components = [Row, Col];
+const components = [Row, Col, Container, Main, Header, Footer, Aside];
 
 const install = (Vue) => {
   components.forEach((component) => {
@@ -12,12 +17,16 @@ const install = (Vue) => {
 
 export default {
   install,
-  Row,
-  Col,
+  ...components,
 };
 
 export {
   install,
   Row,
   Col,
+  Container,
+  Main,
+  Header,
+  Footer,
+  Aside,
 };
