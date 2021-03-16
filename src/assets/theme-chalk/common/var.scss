@@ -6,6 +6,51 @@ $--xl:1920px !default;
 $--header-padding: 0 20px !default;
 $--main-padding: 0 20px !default;
 $--footer-padding: 0 20px !default;
+/* 
+  color变量
+*/
+$--color--primary:#409EFF !default;
+$--color--white:#fff !default;
+$--color--black:#000 !default;
+$--color--transparent:transparent;
+$--color--primary-light-1:mix($--color--white,$--color--primary,10%) !default;
+$--color--primary-light-2:mix($--color--white,$--color--primary,20%) !default;
+$--color--primary-light-3:mix($--color--white,$--color--primary,30%) !default;
+$--color--primary-light-4:mix($--color--white,$--color--primary,40%) !default;
+$--color--primary-light-5:mix($--color--white,$--color--primary,50%) !default;
+$--color--primary-light-6:mix($--color--white,$--color--primary,60%) !default;
+$--color--primary-light-7:mix($--color--white,$--color--primary,70%) !default;
+$--color--primary-light-8:mix($--color--white,$--color--primary,80%) !default;
+$--color--primary-light-9:mix($--color--white,$--color--primary,90%) !default;
+/* 
+  辅助色
+*/
+$--color--success:#67C23A !default;
+$--color--success--light:mix($--color--white,$--color--success,80%);
+$--color--success--lighter:mix($--color--white,$--color--success,90%);
+
+$--color--warning:#E6A23C !default;
+$--color--warning--light:mix($--color--white,$--color--warning,80%);
+$--color--warning--lighter:mix($--color--white,$--color--warning,90%);
+
+$--color--danger:#F56C6C !default;
+$--color--danger--light:mix($--color--white,$--color--danger,80%);
+$--color--danger--lighter:mix($--color--white,$--color--danger,90%);
+
+$--color--info:#909399 !default;
+$--color--info--light:mix($--color--white,$--color--info,80%);
+$--color--info--lighter:mix($--color--white,$--color--info,90%);
+
+$--color--text--primary:#303133 !default;
+$--color--text--regular:#606266 !default;
+$--color--text--secondary:#909399 !default;
+$--color--text--placeholder:#c0c4cc !default;
+
+$--color--border--first:#dcdfe6 !default;
+$--color--border--second:#e4e7ed !default;
+$--color--border--three:#ebeef5 !default;
+$--color--border--four:#f2f6fc !default;
+
 
 $--breakpoints:(
   xs:(max-width: $--sm - 1),

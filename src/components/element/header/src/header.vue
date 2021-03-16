@@ -7,12 +7,12 @@
 <script>
 export default {
   name: 'ElHeader',
-  props:{
-    height:{
-      type:String,
-      default:'60px'
-    }
-  }
+  props: {
+    height: {
+      type: String,
+      default: '60px',
+    },
+  },
 };
 </script>
 

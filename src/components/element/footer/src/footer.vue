@@ -7,13 +7,13 @@
 <script>
 export default {
   name: 'ElFooter',
-  props:{
-    height:{
-      type:String,
-      default:'60px'
-    }
-  }
-};  
+  props: {
+    height: {
+      type: String,
+      default: '60px',
+    },
+  },
+};
 </script>
 
 <style>

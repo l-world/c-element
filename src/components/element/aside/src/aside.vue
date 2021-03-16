@@ -7,13 +7,13 @@
 <script>
 export default {
   name: 'ElAside',
-  props:{
-    width:{
-      type:String,
-      default:'300px'
-    }
-  }
-}
+  props: {
+    width: {
+      type: String,
+      default: '300px',
+    },
+  },
+};
 </script>
 
 <style>
